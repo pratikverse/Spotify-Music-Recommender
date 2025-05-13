@@ -9,15 +9,15 @@ import plotly.graph_objects as go
 
 @st.cache_data
 def load_data():
-    return pd.read_pickle(r"C:/Users/prati/Desktop/Music_recommendation_System-main/data/preprocessed/df.pkl")
+    return pd.read_pickle(r"C:/Users/prati/Desktop/Spotify Music Recommender/data/preprocessed/df.pkl")
 
 @st.cache_data
 def load_latent_features():
-    return np.load(r"C:/Users/prati/Desktop/Music_recommendation_System-main/models/trained/latent_features.npy")
+    return np.load(r"C:/Users/prati/Desktop/Spotify Music Recommender/models/trained/latent_features.npy")
 
 @st.cache_resource
 def load_knn_model():
-    return joblib.load(r"C:/Users/prati/Desktop/Music_recommendation_System-main/models/trained/knn_model.pkl")
+    return joblib.load(r"C:/Users/prati/Desktop/Spotify Music Recommender/models/trained/knn_model.pkl")
 
 @st.cache_data
 def calculate_pca(latent_features, n_components=3):
